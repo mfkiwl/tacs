@@ -1,23 +1,20 @@
-
 <!DOCTYPE html>
 
 <html lang="python">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Battery pack during thermal runaway &#8212; TACS  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=0a676766" />
     <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=a888008e"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Theory" href="../theory/theory.html" />
+    <link rel="next" title="Beam optimization with MPhys" href="Example-Beam_Optimization.html" />
     <link rel="prev" title="Plate under static load" href="Example-Plate.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -30,7 +27,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../theory/theory.html" title="Theory"
+          <a href="Example-Beam_Optimization.html" title="Beam optimization with MPhys"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="Example-Plate.html" title="Plate under static load"
@@ -71,8 +68,7 @@ The problem domain is shown in the figure below with the BDF component names lab
 </dd>
 </dl>
 <p>First, import required libraries:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -214,11 +210,11 @@ over all time steps and all elements in the specified domains.</p>
 The first index after the problem name indicates the optimization step (000 in this case for a single solve), and the second
 index indicates the time-step of the analysis (000 through 050). These files can be converted into a <code class="docutils literal notranslate"><span class="pre">.vtk</span></code> file
 (using <code class="docutils literal notranslate"><span class="pre">f5tovtk</span></code>) for visualization in Paraview or a <code class="docutils literal notranslate"><span class="pre">.plt</span></code> (using <code class="docutils literal notranslate"><span class="pre">f5totec</span></code>) for visualization in TecPlot using:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>f5tovtk Transient_000_0xx.f5
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>f5tovtk<span class="w"> </span>Transient_000_*.f5
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>f5totec Transient_000_0xx.f5
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>f5totec<span class="w"> </span>Transient_000_*.f5
 </pre></div>
 </div>
 <p>The animation below shows what the transient heat transfer temperature solution looks like when visualized in Paraview.</p>
@@ -239,8 +235,8 @@ index indicates the time-step of the analysis (000 through 050). These files can
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="../theory/theory.html"
-                          title="next chapter">Theory</a></p>
+    <p class="topless"><a href="Example-Beam_Optimization.html"
+                          title="next chapter">Beam optimization with MPhys</a></p>
   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
@@ -266,7 +262,7 @@ index indicates the time-step of the analysis (000 through 050). These files can
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../theory/theory.html" title="Theory"
+          <a href="Example-Beam_Optimization.html" title="Beam optimization with MPhys"
              >next</a> |</li>
         <li class="right" >
           <a href="Example-Plate.html" title="Plate under static load"
